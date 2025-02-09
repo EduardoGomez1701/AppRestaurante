@@ -6,8 +6,8 @@ import TableSelector from './components/TableSelector '
 import OrderAlert from './components/OrderAlert'
 
   const menuItem = [
-    { name: 'CHESSECAKE', description: 'UNICO POSTRE CON SABORES DE: MARACUYA,MORA,FRESA,FRUTOS ROJOS', price: 11.000, image: '/CHESSECAKE.jpg' },
-    { name: 'PANECOOK', description: 'DELISIOSO PANECOOK CON MEZCLA DE POLLO, CHAMPIÑOSE, QUESO GRATINADO Y SALSA DE LA CASA.', price: 19.000, image: '/PANECOOK.jpg' },
+    { name: 'CHESSECAKE', description: 'UNICO POSTRE CON SABORES DE: MARACUYA,MORA,FRESA,FRUTOS ROJOS', price: 11.000, image: './static/CHESSECAKE.jpg' },
+    { name: 'PANECOOK', description: 'DELISIOSO PANECOOK CON MEZCLA DE POLLO, CHAMPIÑOSE, QUESO GRATINADO Y SALSA DE LA CASA.', price: 19.000, image: './static/PANECOOK.jpg' },
     // Añade más platos aquí
   ];
 
