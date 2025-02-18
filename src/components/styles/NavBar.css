@@ -1,0 +1,81 @@
+/* Estilos Globales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9fafb;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .back {
+    display: flex;
+    align-items: center;
+    padding: 3rem;
+    background-color: #4299e1;
+    border-radius: 2rem;
+    margin-bottom: 0;
+    height: 50px;
+    text-align: center;
+    position: static;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .brand-logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ffffff;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .brand-logo:hover {
+    color: #14395c;
+  }
+  
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-links li {
+    display: inline-block;
+  }
+  
+  .navbar-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 0.375rem;
+  }
+  
+  .navbar-links a:hover {
+    background-color: #2d5275;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    color: #fff;
+  }
+  
+  /* Botón */
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 0.375rem;
+  }
+  
+  .btn-primary:hover {
+    background-color: #14395c;
+    color: #fff;
+  }
+  

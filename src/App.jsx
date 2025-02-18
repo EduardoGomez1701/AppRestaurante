@@ -1,17 +1,16 @@
-import { useState } from 'react'
+// eslint-disable-next-line no-unused-vars
+import React,{ useState } from 'react'
 
 import './App.css'
-import Menu from './components/Menu'
 import TableSelector from './components/TableSelector '
 import OrderAlert from './components/OrderAlert'
 
-  const menuItem = [
-    { name: 'CHESSECAKE', description: 'UNICO POSTRE CON SABORES DE: MARACUYA,MORA,FRESA,FRUTOS ROJOS', price: 11.000, image: './src/assets/CHESSECAKE.jpg' },
-    { name: 'PANECOOK', description: 'DELISIOSO PANECOOK CON MEZCLA DE POLLO, CHAMPIÑOSE, QUESO GRATINADO Y SALSA DE LA CASA.', price: 19.000, image: './src/assets/PANECOOK.jpg' },
-    // Añade más platos aquí
-  ];
+import NavBar from './components/NavBar'
+import { Route, Routes } from 'react-router-dom'
+import MenuPage from './pages/MenuPage'
 
-  const App = () => {
+
+const App = () => {
     // Definir el estado para la mesa seleccionada
     const [selectedTable, setSelectedTable] = useState('');
   
@@ -20,13 +19,18 @@ import OrderAlert from './components/OrderAlert'
       setSelectedTable(tableNumber);
     };
   
-  return (
-    <div className="container mx-auto p-8 bg-gray-100 rounded-lg shadow-md">
-      <h1 className="text-4xl font-bold text-center mb-8 text-gray-800">Menú del Restaurante</h1>
+    return (
+      <div className="container mx-auto p-8 bg-gray-100 rounded-lg shadow-md">
+      <h1 className="text-4xl font-bold text-center mb-8 text-gray-800">Bienvenido al Restaurante</h1>
       <TableSelector totalTables={9} onSelectTable={handleTableSelect} />
-      <Menu items={menuItem} />
-      {selectedTable && <p className='text-center mt-4 text-lg'>Mesa Seleccionada: {selectedTable}</p>}
-      <OrderAlert selectedTable={selectedTable} />
+      {selectedTable && <p className="text-center mt-4 text-xl font-semibold text-gray-700">Mesa seleccionada: {selectedTable}</p>}
+      <OrderAlert selectedTable={selectedTable} /> 
+
+      <NavBar/> 
+      <Routes>
+        <Route path='/menu' element={<MenuPage/>}/>
+      </Routes>
+      
     </div>
     );
   };

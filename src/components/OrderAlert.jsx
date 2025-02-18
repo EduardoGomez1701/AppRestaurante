@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import './styles/NavBar.css'
 
 const OrderAlert = ({ selectedTable }) => {
   const [alertSent, setAlertSent] = useState(false);
@@ -19,7 +20,7 @@ const OrderAlert = ({ selectedTable }) => {
     <div className="order-alert text-center mt-6">
       <button
         onClick={handleSendAlert}
-        className="bg-blue-500 text-white px-4 py-2 rounded-md"
+        className="bg-blue-500 text-white px-4 py-2 rounded-md mb-2 btn btn-primary"
         disabled={!selectedTable || alertSent}
       >
         {alertSent ? 'Aviso Enviado' : 'Llamar al Mesero'}
